@@ -5,6 +5,7 @@ export default function App() {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.imageContainer}>
+        <Text style={styles.companyName}>companyname</Text>
       </View>
       <View style={styles.buttonContainer}>
         <Text style={styles.titleText}>Car Detailing</Text>
@@ -38,6 +39,12 @@ const styles = StyleSheet.create({
     flex: 2,
     backgroundColor: '#0059d4',
   },
+  companyName: {
+    marginTop: 80,
+    marginLeft: 40,
+    color: 'white',
+    fontWeight: 'bold'
+  },  
   buttonContainer: {
     paddingTop:0,
     flexDirection: 'column',
