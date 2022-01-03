@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-export default function WelcomePage(){
+export default function WelcomePage({navigation}){
     return(
         <View style={styles.mainContainer}>
             <View style={styles.imageContainer}>
@@ -10,13 +10,13 @@ export default function WelcomePage(){
                 <Text style={styles.bodyText}>We detail your vehicle anytime in the year from the comfort of your home!</Text>
                 <TouchableOpacity
                     style={styles.loginScreenButton}
-                    onPress={() => navigate('HomeScreen')}
+                    onPress={() => navigation.navigate('Login')}
                     underlayColor='#fff'>
                     <Text style={styles.loginText}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.signupScreenButton}
-                    onPress={() => navigate('HomeScreen')}
+                    onPress={() => navigation.navigate('Signup')}
                     underlayColor='#fff'>
                     <Text style={styles.signupText}>Sign up</Text>
                 </TouchableOpacity>
@@ -28,8 +28,8 @@ export default function WelcomePage(){
 const styles = StyleSheet.create({
   mainContainer: {
     flexDirection: 'column',
-    flex: 2,
-    backgroundColor: '#fff',
+    flex: 1,
+    backgroundColor: '#0059d4',
   },
     imageContainer: {
         flexDirection: 'column',
@@ -44,8 +44,10 @@ const styles = StyleSheet.create({
       },  
       buttonContainer: {
         paddingTop:0,
+        borderTopStartRadius: 60,
+        borderTopEndRadius: 60,
         flexDirection: 'column',
-        flex: 1,
+        flex: 1.5,
         backgroundColor: '#006bff',
       },
       loginScreenButton: {
