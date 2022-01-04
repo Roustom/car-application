@@ -3,12 +3,7 @@ export default function WelcomePage({navigation}){
     return(
         <View style={styles.mainContainer}>
             <View style={styles.imageContainer}>
-                <Text style={styles.companyName}>companyname</Text>
-            </View>
-            <View style={styles.buttonContainer}>
-                <Text style={styles.titleText}>Car Detailing</Text>
-                <Text style={styles.bodyText}>We detail your vehicle anytime in the year from the comfort of your home!</Text>
-                <TouchableOpacity
+                <Tex
                     style={styles.loginScreenButton}
                     onPress={() => navigation.navigate('Login')}
                     underlayColor='#fff'>
